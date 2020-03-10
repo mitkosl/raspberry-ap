@@ -1,0 +1,14 @@
+[Unit]
+Description=Hosts an Access Point when no wi-fi is configured
+After=multi-user.target dhcpcd.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh /home/pi/raspberry-ap/start.sh
+#ExecStartPre=/bin/sleep 50
+#ExecStartPost=/bin/sh /home/pi/Caretaker/start.sh
+#Restart=always
+
+[Install]
+WantedBy=multi-user.target

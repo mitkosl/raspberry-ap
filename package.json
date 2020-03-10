@@ -1,0 +1,26 @@
+{
+  "name": "raspberry-ap",
+  "version": "0.0.1",
+  "description": "Node Application for Raspberry PI 4 Wifi Configuration - Access Point",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "provision": "apt-get update -y && apt-get install dnsmasq iw -y",
+    "bootstrap": "wget http://treebeard.home.net:1234/bootstrap/pifi-conf -O bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh"
+  },
+  "keywords": [
+    "RaspberryPi 4",
+    "Node",
+    "Wifi",
+    "Access Point"
+  ],
+  "author": "dimitar.slavchev",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.2",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "underscore": "^1.9.2"
+  }
+}

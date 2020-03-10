@@ -1,0 +1,11 @@
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=BG
+
+network={
+    mode=2
+    ssid="{{ ssid }}"
+    psk="{{ passphrase }}"
+    frequency=2437
+    key_mgmt=WPA-PSK
+}

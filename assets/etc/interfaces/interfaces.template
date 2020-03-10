@@ -1,0 +1,12 @@
+auto eth0
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+auto wlan0
+#allow-hotplug wlan0
+iface wlan0 inet static
+        network {{ network }}
+        address {{ ip_address }}
+        netmask {{ netmask }}
+        broadcast {{ broadcast_address }}
